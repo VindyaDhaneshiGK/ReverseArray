@@ -17,9 +17,22 @@ int[] ReverseArray(int[] nums)
     }
     return nums;
 }
-int[] result;
-result = ReverseArray(new int[] { 1, 2, 3, 4, 5 });
-Console.WriteLine("Reverse Array is:"+result);
+int[] result= new int[] { 1, 2, 3, 4, 5 };
+
+Console.WriteLine("Before Change Array is:");
+Console.WriteLine("");
+foreach (int num in result)
+{
+    Console.Write(num + ",");
+}
+Console.WriteLine("");
+result = ReverseArray(result);
+Console.WriteLine("After Reverse Array is:");
+Console.WriteLine("");
+foreach (int num in result)
+{
+    Console.Write(num + ",");
+}
 Console.ReadLine();
 
 // Output: Reverse Array is:5,4,3,2,1
