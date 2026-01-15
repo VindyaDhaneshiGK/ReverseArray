@@ -5,17 +5,20 @@ int[] ReverseArray(int[] nums)
     int left = 0, right = nums.Length - 1;
     if (nums == null || nums.Length == 0)
     {
-       throw new ArgumentException("Input array cannot be null or empty");
+        throw new ArgumentException("Input array cannot be null or empty");
     }
-    while (left < right)
+    else
     {
-        int temp = nums[left];
-        nums[left] = nums[right];
-        nums[right] = temp;
-        left++;
-        right--;
+        while (left < right)
+        {
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
+        }
+        return nums;
     }
-    return nums;
 }
 int[] result= new int[] { 1, 2, 3, 4, 5 };
 
